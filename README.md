@@ -2,7 +2,7 @@
     <p><a href="#"><a href="https://ollama.com/"><img alt="ollama" src="./imgs/ollama-icon.png" width="200px" /></a><img alt="+" src="./imgs/grey-plus.png" width="100px" /></a><a href="https://www.minecraft.net/"><img alt="discord" src="./imgs/minecraft-icon.png" width="190px" /></a></p>
     <h1>Minecraft AI Companion</h1>
     <h3><a href="#"></a>Ollama in your Minecraft World</h3>
-    <p><a href="#"></a><a href="https://spdx.org/licenses/GPL-3.0-or-later.html"><img alt="License" src="https://img.shields.io/badge/License-GPL%20v3.0-darkgreen.svg" /></a>
+    <p><a href="#"></a><a href="https://www.gnu.org/licenses/gpl-3.0.en.html"><img alt="License" src="https://img.shields.io/badge/License-GPL%20v3.0-darkgreen.svg" /></a>
     <a href="#"></a><a href="https://github.com/kevinthedang/minecraft-ollama/releases/latest"><img alt="Release" src="https://img.shields.io/github/v/release/kevinthedang/minecraft-ollama?logo=github" /></a>
     <!-- <a href="#"></a><a href="https://github.com/kevinthedang/minecraft-ollama/actions/workflows/sample.yml"><img alt="Build Status" src="https://github.com/kevinthedang/minecraft-ollama/actions/workflows/sample.yml/badge.svg" /></a> -->
 </div>
@@ -52,4 +52,4 @@ It would be awesome to implement [Ollama](https://ollama.com/) into Minecraft as
 * [Kevin Dang](https://github.com/kevinthedang)
 * [Drew Bogdan](https://github.com/DrewBogdan)
 
-[minecraft-ollama](https://github.com/kevinthedang/minecraft-ollama) by [Kevin Dang](https://github.com/kevinthedang) is licensed under [GNU GPLv3](https://spdx.org/licenses/GPL-3.0-or-later.html)
+[minecraft-ollama](https://github.com/kevinthedang/minecraft-ollama) by [Kevin Dang](https://github.com/kevinthedang) is licensed under [GNU GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)
