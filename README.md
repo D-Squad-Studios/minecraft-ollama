@@ -47,9 +47,4 @@ It would be awesome to implement [Ollama](https://ollama.com/) into Minecraft as
 * [Java Intro with Minecraft Modding](https://www.youtube.com/playlist?list=PLKGarocXCE1FeXvEogpjz4SvHxF_FJRO6)
 * [Forge 1.20.X Tutorials](https://www.youtube.com/playlist?list=PLKGarocXCE1H9Y21-pxjt5Pt8bW14twa-)
   * [1.19.X Tutorials](https://www.youtube.com/playlist?list=PLKGarocXCE1HrC60yuTNTGRoZc6hf5Uvl)
-
-## Acknowledgement
-* [Kevin Dang](https://github.com/kevinthedang)
-* [Drew Bogdan](https://github.com/DrewBogdan)
-
-[minecraft-ollama](https://github.com/kevinthedang/minecraft-ollama) by [Kevin Dang](https://github.com/kevinthedang) is licensed under [GNU GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)
+  
