@@ -2,9 +2,9 @@
     <p><a href="#"><a href="https://ollama.com/"><img alt="ollama" src="./imgs/ollama-icon.png" width="200px" /></a><img alt="+" src="./imgs/grey-plus.png" width="100px" /></a><a href="https://www.minecraft.net/"><img alt="discord" src="./imgs/minecraft-icon.png" width="190px" /></a></p>
     <h1>Minecraft AI Companion</h1>
     <h3><a href="#"></a>Ollama in your Minecraft World</h3>
-    <p><a href="#"></a><a href="https://creativecommons.org/licenses/by/4.0/"><img alt="License" src="https://img.shields.io/badge/License-CC_BY_4.0-darkgreen.svg" /></a>
-    <a href="#"></a><a href="https://github.com/kevinthedang/minecraft-ollama/releases/latest"><img alt="Release" src="https://img.shields.io/github/v/release/kevinthedang/minecraft-ollama?logo=github" /></a>
-    <!-- <a href="#"></a><a href="https://github.com/kevinthedang/minecraft-ollama/actions/workflows/sample.yml"><img alt="Build Status" src="https://github.com/kevinthedang/minecraft-ollama/actions/workflows/sample.yml/badge.svg" /></a> -->
+    <p><a href="#"></a><a href="https://www.gnu.org/licenses/gpl-3.0.en.html"><img alt="License" src="https://img.shields.io/badge/License-GPL%20v3.0-darkgreen.svg" /></a>
+    <a href="#"></a><a href="https://github.com/D-Squad-Studios/minecraft-ollama/releases/latest"><img alt="Release" src="https://img.shields.io/github/v/release/D-Squad-Studios/minecraft-ollama?logo=github" /></a>
+    <!-- <a href="#"></a><a href="https://github.com/D-Squad-Studios/minecraft-ollama/actions/workflows/sample.yml"><img alt="Build Status" src="https://github.com/D-Squad-Studios/minecraft-ollama/actions/workflows/sample.yml/badge.svg" /></a> -->
 </div>
 
 ## About/Goals
@@ -47,9 +47,3 @@ It would be awesome to implement [Ollama](https://ollama.com/) into Minecraft as
 * [Java Intro with Minecraft Modding](https://www.youtube.com/playlist?list=PLKGarocXCE1FeXvEogpjz4SvHxF_FJRO6)
 * [Forge 1.20.X Tutorials](https://www.youtube.com/playlist?list=PLKGarocXCE1H9Y21-pxjt5Pt8bW14twa-)
   * [1.19.X Tutorials](https://www.youtube.com/playlist?list=PLKGarocXCE1HrC60yuTNTGRoZc6hf5Uvl)
-
-## Acknowledgement
-* [Kevin Dang](https://github.com/kevinthedang)
-* [Drew Bogdan](https://github.com/DrewBogdan)
-
-[minecraft-ollama](https://github.com/kevinthedang/minecraft-ollama) © 2024 by [Kevin Dang](https://github.com/kevinthedang) is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
