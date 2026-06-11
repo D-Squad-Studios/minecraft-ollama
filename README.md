@@ -21,6 +21,70 @@ It would be awesome to implement [Ollama](https://ollama.com/) into Minecraft as
 > [!NOTE]
 > Conversations likely limited to villagers with jobs 
 
+## Quick Start
+
+### Prerequisites
+- **Java 21** (JDK)
+- **[Ollama](https://ollama.com/)** installed and running locally.
+    * Make sure port 11434 is open on your computer. If port 11434 is in use, you can specify a different port in the Ollama setting by updating the `baseUrl` in `src/main/java/net/kevinthedang/ollamamod/chat/OllamaSettings.java`. You can also change your Ollama endpoint if it is not running locally. By default, the mod expects Ollama to be available at `http://localhost:11434`.
+- **Git**
+
+### Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/CS26-13/minecraft-ollama.git
+   cd minecraft-ollama
+   ```
+
+2. **Pull the required Ollama models**
+   ```bash
+   ollama pull granite4:latest
+   ollama pull minimax-m2.5:cloud
+   ollama pull nomic-embed-text:latest
+   ```
+
+3. **Set up Ollama service**
+    * Open the Ollama application and navigate to the `Settings` section. 
+    * Make sure to enable "Expose API to the network" to allow the mod to communicate with the Ollama server. 
+    * Depending on your computer performance, adjust the context length as needed. We recommend 16,000 tokens or more for better conversations, but you can start with a smaller context length if you encounter performance issues.
+    * Log in to your Ollama account within the application to access cloud models like `minimax-m2.5:cloud`.
+    * Then, either keep the Ollama application running or run the command below in the terminal to start Ollama.
+   ```bash
+   ollama serve
+   # If you run this command, leave the terminal open to keep Ollama running. You can stop Ollama later by pressing Ctrl+C in that terminal. Open another terminal for the next steps.
+   ```
+
+
+5. **Extracting and Organizing Minecraft Knowledge Base** (Only required to run once unless there is an update. Run at project root)
+
+   ```bash
+   npm install minecraft-data
+   node tools/brewing_recipes.js
+   node tools/minecraft_data_extractor.js
+   ```
+
+6. **Seed the vector store** (Minecraft knowledge base for villager conversations. Only required to run once unless there is an update. Run at root of the project)
+   ```bash
+   ./gradlew seedData --args="--ingest tools/seed-documents"
+   ```
+
+7. **Launch the game**
+
+   ```bash
+   ./gradlew runClient
+    ```
+
+8. **Chat with a villager** — find a villager, open the trade screen, and click the **"Chat"** button.
+
+### Running Tests
+
+macOS / Linux:
+```bash
+./gradlew test                       # All tests (requires Ollama running)
+./gradlew test -PdisableOllamaTests  # Unit tests only
+```
+
 ## Mod vs Plugin?
 * A ModPack will disassemble and assemble the game code to add something new into it when building the game.
 * A Plugin respects the game code but adds on top of it, it can modify in this tree:

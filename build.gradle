@@ -1,3 +1,9 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
 plugins {
     id 'eclipse'
     id 'idea'
@@ -107,14 +113,14 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
     // Put repositories for dependencies here
+    maven {
+        name = 'Minecraft libraries'
+        url = 'https://libraries.minecraft.net'
+    }
     mavenCentral()
     maven {
         name = 'Forge'
         url = 'https://maven.minecraftforge.net'
-    }
-    maven {
-        name = 'Minecraft libraries'
-        url = 'https://libraries.minecraft.net'
     }
     exclusiveContent {
         forRepository {
@@ -162,6 +168,13 @@ dependencies {
     // For more info:
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
+
+    // LangChain4j for vector store
+    implementation 'dev.langchain4j:langchain4j:0.35.0'
+
+    // JUnit for tests
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
@@ -207,7 +220,7 @@ publishing {
     }
     repositories {
         maven {
-            url "file://${project.projectDir}/mcmodsrepo"
+            url = project.file("mcmodsrepo").toURI()
         }
     }
 }
@@ -216,8 +229,24 @@ tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
 }
 
+tasks.withType(Test).configureEach {
+    useJUnitPlatform()
+    if (providers.gradleProperty('disableOllamaTests').isPresent()) {
+        useJUnitPlatform {
+            excludeTags 'ollama'
+        }
+    }
+    testLogging {
+        events 'failed', 'skipped'
+        showStandardStreams = true
+        exceptionFormat 'full'
+    }
+}
+
 // IntelliJ no longer downloads javadocs and sources by default, this tells Gradle to force IntelliJ to do it.
-idea.module { downloadJavadoc = downloadSources = true }
+idea.module { downloadJavadoc = true
+    downloadSources = true
+}
 
 eclipse {
     // Run everytime eclipse builds the code
@@ -234,3 +263,115 @@ sourceSets.each {
     it.output.resourcesDir = dir
     it.java.destinationDirectory = dir
 }
+
+// Seed data generator tool (tools/SeedDataGenerator.java)
+def seedToolOutputDir = layout.buildDirectory.dir("seed-tool")
+def seedArgsProvider = providers.gradleProperty('seedArgs')
+
+tasks.register('compileSeedTool', JavaCompile) {
+    description = 'Compile SeedDataGenerator standalone tool.'
+    group = 'tools'
+
+    source = file('tools/SeedDataGenerator.java')
+    dependsOn tasks.named('compileJava')
+    classpath = files(sourceSets.main.output) + configurations.compileClasspath
+    destinationDirectory = seedToolOutputDir
+    sourceCompatibility = '21'
+    targetCompatibility = '21'
+    options.encoding = 'UTF-8'
+}
+
+tasks.register('seedData', JavaExec) {
+    description = 'Run SeedDataGenerator with optional --args or -PseedArgs="...".'
+    group = 'tools'
+
+    dependsOn tasks.named('compileSeedTool')
+    classpath = files(seedToolOutputDir) + sourceSets.main.runtimeClasspath
+    mainClass = 'net.kevinthedang.ollamamod.tools.SeedDataGenerator'
+
+    if (seedArgsProvider.isPresent()) {
+        args seedArgsProvider.get().tokenize()
+    }
+}
+
+tasks.register('printSeedToolClasspath') {
+    description = 'Print classpath entries needed to compile/run SeedDataGenerator manually.'
+    group = 'tools'
+    doLast {
+        def entries = []
+        entries.addAll(sourceSets.main.output.files)
+        entries.addAll(configurations.compileClasspath.files)
+        println entries.collect { it.absolutePath }.join(File.pathSeparator)
+    }
+}
+
+// JAR SIGNING 
+// This section adds an automatic post-build signing step to the Forge mod.
+// When a local keystore.properties file and keystore (modsigning.jks) are found,
+// Gradle uses Java's jarsigner (via Ant) to digitally sign the final mod JAR.
+//
+// If keystore.properties does not exist, the signing step is skipped safely,
+// so anyone can build the mod without needing the private key.
+import java.util.Properties
+
+def keystorePropsFile = rootProject.file('keystore.properties')
+def keystoreProps = new Properties()
+if (keystorePropsFile.exists()) {
+    keystorePropsFile.withInputStream { keystoreProps.load(it) }
+}
+
+// Figure out which jar is the "final" artifact for this ForgeGradle version.
+// Prefer reobf/remapped output when present, otherwise fall back to plain jar.
+def resolveUnsignedJarFile = {
+    def candidates = ['reobfJar', 'remapJar', 'jar']
+    for (String name : candidates) {
+        def t = tasks.findByName(name)
+        if (t != null) {
+            try {
+                return t.archiveFile.get().asFile
+            } catch (ignored) {
+                if (t.hasProperty('archivePath')) return t.archivePath
+            }
+        }
+    }
+    throw new GradleException("Could not determine which JAR to sign (no jar-like tasks found).")
+}
+
+//Register a new Gradle task: signJar
+//Runs automatically after 'build'
+//Signs the JAR using the Ant signjar tool (same as jarsigner)
+//Produces a copy of the jar with '-signed' appended to its filename
+tasks.register('signJar') {
+    description = 'Sign the mod jar using ant.signjar (jarsigner under the hood)'
+    group = 'build'
+
+    onlyIf { keystorePropsFile.exists() }
+
+    doLast {
+        def unsigned = resolveUnsignedJarFile()
+        if (!unsigned.exists()) {
+            throw new GradleException("Unsigned JAR not found: ${unsigned}")
+        }
+        def signed = new File(unsigned.parentFile, unsigned.name.replace('.jar', '-signed.jar'))
+
+        logger.lifecycle("Signing ${unsigned.name} → ${signed.name}")
+
+        // Core signing logic using Ant's built-in signjar task
+        ant.signjar(
+            jar: unsigned,                              // Input jar to sign
+            signedjar: signed,                          // Output jar file
+            keystore: keystoreProps['keystore'],        // Path to keystore file
+            storepass: keystoreProps['storePass'],
+            keypass: keystoreProps['keyPass'],
+            alias: keystoreProps['keyAlias'],
+            verbose: true                               // Print detailed signing info
+        )
+
+        logger.lifecycle("Signed JAR: ${signed}")
+    }
+}
+
+tasks.named('build') {
+    finalizedBy tasks.named('signJar')
+}
+

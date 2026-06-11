@@ -1,5 +1,6 @@
 package net.kevinthedang.ollamamod;
 
+import net.kevinthedang.ollamamod.chat.OllamaSettings;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.common.ForgeConfigSpec;
@@ -14,7 +15,7 @@ import java.util.stream.Collectors;
 
 // An example config class. This is not required, but it's a good idea to have one to keep your config organized.
 // Demonstrates how to use Forge's config APIs
-@Mod.EventBusSubscriber(modid = OllamaMod.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = OllamaMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Config {
     private static final ForgeConfigSpec.Builder BUILDER = new ForgeConfigSpec.Builder();
 
@@ -29,6 +30,14 @@ public class Config {
     public static final ForgeConfigSpec.ConfigValue<String> MAGIC_NUMBER_INTRODUCTION = BUILDER
             .comment("What you want the introduction message to be for the magic number")
             .define("magicNumberIntroduction", "The magic number is... ");
+
+    private static final ForgeConfigSpec.ConfigValue<String> CHAT_MODEL = BUILDER
+            .comment("The Ollama model used for low-effort conversations")
+            .define("chatModel", OllamaSettings.DEFAULT_CHAT_MODEL);
+
+    private static final ForgeConfigSpec.ConfigValue<String> TOOL_MODEL = BUILDER
+            .comment("The Ollama model used for higher-effort conversations")
+            .define("toolModel", OllamaSettings.DEFAULT_TOOL_MODEL);
 
     // a list of strings that are treated as resource locations for items
     private static final ForgeConfigSpec.ConfigValue<List<? extends String>> ITEM_STRINGS = BUILDER
@@ -52,9 +61,19 @@ public class Config {
         magicNumber = MAGIC_NUMBER.get();
         magicNumberIntroduction = MAGIC_NUMBER_INTRODUCTION.get();
 
+        // Sync persisted model selections into OllamaSettings
+        OllamaSettings.chatModel = CHAT_MODEL.get();
+        OllamaSettings.toolModel = TOOL_MODEL.get();
+
         // convert the list of strings into a set of items
         items = ITEM_STRINGS.get().stream()
                 .map(itemName -> ForgeRegistries.ITEMS.getValue(ResourceLocation.tryParse(itemName)))
                 .collect(Collectors.toSet());
+    }
+
+    // Persist current model selections from OllamaSettings to the config file.
+    public static void saveModelSelection() {
+        CHAT_MODEL.set(OllamaSettings.chatModel);
+        TOOL_MODEL.set(OllamaSettings.toolModel);
     }
 }

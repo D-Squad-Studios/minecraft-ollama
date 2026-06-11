@@ -1,0 +1,202 @@
+[
+  {
+    "name": "apple",
+    "hungerBarsRestored": 2,
+    "saturation": 19.2
+  },
+  {
+    "name": "mushroom_stew",
+    "hungerBarsRestored": 3,
+    "saturation": 86.4
+  },
+  {
+    "name": "bread",
+    "hungerBarsRestored": 2.5,
+    "saturation": 60
+  },
+  {
+    "name": "porkchop",
+    "hungerBarsRestored": 1.5,
+    "saturation": 10.8
+  },
+  {
+    "name": "cooked_porkchop",
+    "hungerBarsRestored": 4,
+    "saturation": 204.8
+  },
+  {
+    "name": "golden_apple",
+    "hungerBarsRestored": 2,
+    "saturation": 76.8
+  },
+  {
+    "name": "enchanted_golden_apple",
+    "hungerBarsRestored": 2,
+    "saturation": 76.8
+  },
+  {
+    "name": "cod",
+    "hungerBarsRestored": 1,
+    "saturation": 1.6
+  },
+  {
+    "name": "salmon",
+    "hungerBarsRestored": 1,
+    "saturation": 1.6
+  },
+  {
+    "name": "tropical_fish",
+    "hungerBarsRestored": 0.5,
+    "saturation": 0.4
+  },
+  {
+    "name": "pufferfish",
+    "hungerBarsRestored": 0.5,
+    "saturation": 0.4
+  },
+  {
+    "name": "cooked_cod",
+    "hungerBarsRestored": 2.5,
+    "saturation": 60
+  },
+  {
+    "name": "cooked_salmon",
+    "hungerBarsRestored": 3,
+    "saturation": 115.200005
+  },
+  {
+    "name": "cookie",
+    "hungerBarsRestored": 1,
+    "saturation": 1.6
+  },
+  {
+    "name": "melon_slice",
+    "hungerBarsRestored": 1,
+    "saturation": 4.8
+  },
+  {
+    "name": "dried_kelp",
+    "hungerBarsRestored": 0.5,
+    "saturation": 1.2
+  },
+  {
+    "name": "beef",
+    "hungerBarsRestored": 1.5,
+    "saturation": 10.8
+  },
+  {
+    "name": "cooked_beef",
+    "hungerBarsRestored": 4,
+    "saturation": 204.8
+  },
+  {
+    "name": "chicken",
+    "hungerBarsRestored": 1,
+    "saturation": 4.8
+  },
+  {
+    "name": "cooked_chicken",
+    "hungerBarsRestored": 3,
+    "saturation": 86.4
+  },
+  {
+    "name": "rotten_flesh",
+    "hungerBarsRestored": 2,
+    "saturation": 6.4
+  },
+  {
+    "name": "spider_eye",
+    "hungerBarsRestored": 1,
+    "saturation": 12.8
+  },
+  {
+    "name": "carrot",
+    "hungerBarsRestored": 1.5,
+    "saturation": 21.6
+  },
+  {
+    "name": "potato",
+    "hungerBarsRestored": 0.5,
+    "saturation": 1.2
+  },
+  {
+    "name": "baked_potato",
+    "hungerBarsRestored": 2.5,
+    "saturation": 60
+  },
+  {
+    "name": "poisonous_potato",
+    "hungerBarsRestored": 1,
+    "saturation": 4.8
+  },
+  {
+    "name": "golden_carrot",
+    "hungerBarsRestored": 3,
+    "saturation": 172.8
+  },
+  {
+    "name": "pumpkin_pie",
+    "hungerBarsRestored": 4,
+    "saturation": 76.8
+  },
+  {
+    "name": "rabbit",
+    "hungerBarsRestored": 1.5,
+    "saturation": 10.8
+  },
+  {
+    "name": "cooked_rabbit",
+    "hungerBarsRestored": 2.5,
+    "saturation": 60
+  },
+  {
+    "name": "rabbit_stew",
+    "hungerBarsRestored": 5,
+    "saturation": 240
+  },
+  {
+    "name": "mutton",
+    "hungerBarsRestored": 1,
+    "saturation": 4.8
+  },
+  {
+    "name": "cooked_mutton",
+    "hungerBarsRestored": 3,
+    "saturation": 115.200005
+  },
+  {
+    "name": "chorus_fruit",
+    "hungerBarsRestored": 2,
+    "saturation": 19.2
+  },
+  {
+    "name": "beetroot",
+    "hungerBarsRestored": 0.5,
+    "saturation": 2.4
+  },
+  {
+    "name": "beetroot_soup",
+    "hungerBarsRestored": 3,
+    "saturation": 86.4
+  },
+  {
+    "name": "suspicious_stew",
+    "hungerBarsRestored": 3,
+    "saturation": 86.4
+  },
+  {
+    "name": "sweet_berries",
+    "hungerBarsRestored": 1,
+    "saturation": 1.6
+  },
+  {
+    "name": "glow_berries",
+    "hungerBarsRestored": 1,
+    "saturation": 1.6
+  },
+  {
+    "name": "honey_bottle",
+    "hungerBarsRestored": 3,
+    "saturation": 14.400001
+  }
+]

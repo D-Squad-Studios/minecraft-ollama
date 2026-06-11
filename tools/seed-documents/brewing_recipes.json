@@ -1,0 +1,334 @@
+[
+  {
+    "input": "Water Bottle",
+    "ingredient": "Nether Wart",
+    "output": "Awkward Potion",
+    "description": "Base for most potions"
+  },
+  {
+    "input": "Water Bottle",
+    "ingredient": "Fermented Spider Eye",
+    "output": "Potion of Weakness",
+    "description": "Only potion that can be made without Nether Wart"
+  },
+  {
+    "input": "Water Bottle",
+    "ingredient": "Redstone",
+    "output": "Mundane Potion",
+    "description": "No effect"
+  },
+  {
+    "input": "Water Bottle",
+    "ingredient": "Glowstone Dust",
+    "output": "Thick Potion",
+    "description": "No effect"
+  },
+  {
+    "input": "Awkward Potion",
+    "ingredient": "Sugar",
+    "output": "Potion of Swiftness",
+    "effect": "Speed",
+    "duration": "3:00"
+  },
+  {
+    "input": "Awkward Potion",
+    "ingredient": "Rabbit's Foot",
+    "output": "Potion of Leaping",
+    "effect": "Jump Boost",
+    "duration": "3:00"
+  },
+  {
+    "input": "Awkward Potion",
+    "ingredient": "Glistering Melon Slice",
+    "output": "Potion of Healing",
+    "effect": "Instant Health",
+    "duration": "instant"
+  },
+  {
+    "input": "Awkward Potion",
+    "ingredient": "Blaze Powder",
+    "output": "Potion of Strength",
+    "effect": "Strength",
+    "duration": "3:00"
+  },
+  {
+    "input": "Awkward Potion",
+    "ingredient": "Magma Cream",
+    "output": "Potion of Fire Resistance",
+    "effect": "Fire Resistance",
+    "duration": "3:00"
+  },
+  {
+    "input": "Awkward Potion",
+    "ingredient": "Ghast Tear",
+    "output": "Potion of Regeneration",
+    "effect": "Regeneration",
+    "duration": "0:45"
+  },
+  {
+    "input": "Awkward Potion",
+    "ingredient": "Spider Eye",
+    "output": "Potion of Poison",
+    "effect": "Poison",
+    "duration": "0:45"
+  },
+  {
+    "input": "Awkward Potion",
+    "ingredient": "Pufferfish",
+    "output": "Potion of Water Breathing",
+    "effect": "Water Breathing",
+    "duration": "3:00"
+  },
+  {
+    "input": "Awkward Potion",
+    "ingredient": "Golden Carrot",
+    "output": "Potion of Night Vision",
+    "effect": "Night Vision",
+    "duration": "3:00"
+  },
+  {
+    "input": "Awkward Potion",
+    "ingredient": "Turtle Shell",
+    "output": "Potion of the Turtle Master",
+    "effect": "Slowness IV + Resistance III",
+    "duration": "0:20"
+  },
+  {
+    "input": "Awkward Potion",
+    "ingredient": "Phantom Membrane",
+    "output": "Potion of Slow Falling",
+    "effect": "Slow Falling",
+    "duration": "1:30"
+  },
+  {
+    "input": "Potion of Swiftness",
+    "ingredient": "Redstone",
+    "output": "Potion of Swiftness (Extended)",
+    "effect": "Speed",
+    "duration": "8:00",
+    "modifier": "Extended"
+  },
+  {
+    "input": "Potion of Leaping",
+    "ingredient": "Redstone",
+    "output": "Potion of Leaping (Extended)",
+    "effect": "Jump Boost",
+    "duration": "8:00",
+    "modifier": "Extended"
+  },
+  {
+    "input": "Potion of Strength",
+    "ingredient": "Redstone",
+    "output": "Potion of Strength (Extended)",
+    "effect": "Strength",
+    "duration": "8:00",
+    "modifier": "Extended"
+  },
+  {
+    "input": "Potion of Fire Resistance",
+    "ingredient": "Redstone",
+    "output": "Potion of Fire Resistance (Extended)",
+    "effect": "Fire Resistance",
+    "duration": "8:00",
+    "modifier": "Extended"
+  },
+  {
+    "input": "Potion of Regeneration",
+    "ingredient": "Redstone",
+    "output": "Potion of Regeneration (Extended)",
+    "effect": "Regeneration",
+    "duration": "1:30",
+    "modifier": "Extended"
+  },
+  {
+    "input": "Potion of Poison",
+    "ingredient": "Redstone",
+    "output": "Potion of Poison (Extended)",
+    "effect": "Poison",
+    "duration": "1:30",
+    "modifier": "Extended"
+  },
+  {
+    "input": "Potion of Water Breathing",
+    "ingredient": "Redstone",
+    "output": "Potion of Water Breathing (Extended)",
+    "effect": "Water Breathing",
+    "duration": "8:00",
+    "modifier": "Extended"
+  },
+  {
+    "input": "Potion of Night Vision",
+    "ingredient": "Redstone",
+    "output": "Potion of Night Vision (Extended)",
+    "effect": "Night Vision",
+    "duration": "8:00",
+    "modifier": "Extended"
+  },
+  {
+    "input": "Potion of Invisibility",
+    "ingredient": "Redstone",
+    "output": "Potion of Invisibility (Extended)",
+    "effect": "Invisibility",
+    "duration": "8:00",
+    "modifier": "Extended"
+  },
+  {
+    "input": "Potion of Weakness",
+    "ingredient": "Redstone",
+    "output": "Potion of Weakness (Extended)",
+    "effect": "Weakness",
+    "duration": "4:00",
+    "modifier": "Extended"
+  },
+  {
+    "input": "Potion of Slowness",
+    "ingredient": "Redstone",
+    "output": "Potion of Slowness (Extended)",
+    "effect": "Slowness",
+    "duration": "4:00",
+    "modifier": "Extended"
+  },
+  {
+    "input": "Potion of the Turtle Master",
+    "ingredient": "Redstone",
+    "output": "Potion of the Turtle Master (Extended)",
+    "effect": "Slowness IV + Resistance III",
+    "duration": "0:40",
+    "modifier": "Extended"
+  },
+  {
+    "input": "Potion of Slow Falling",
+    "ingredient": "Redstone",
+    "output": "Potion of Slow Falling (Extended)",
+    "effect": "Slow Falling",
+    "duration": "4:00",
+    "modifier": "Extended"
+  },
+  {
+    "input": "Potion of Swiftness",
+    "ingredient": "Glowstone Dust",
+    "output": "Potion of Swiftness II",
+    "effect": "Speed II",
+    "duration": "1:30",
+    "modifier": "Enhanced"
+  },
+  {
+    "input": "Potion of Leaping",
+    "ingredient": "Glowstone Dust",
+    "output": "Potion of Leaping II",
+    "effect": "Jump Boost II",
+    "duration": "1:30",
+    "modifier": "Enhanced"
+  },
+  {
+    "input": "Potion of Healing",
+    "ingredient": "Glowstone Dust",
+    "output": "Potion of Healing II",
+    "effect": "Instant Health II",
+    "duration": "instant",
+    "modifier": "Enhanced"
+  },
+  {
+    "input": "Potion of Strength",
+    "ingredient": "Glowstone Dust",
+    "output": "Potion of Strength II",
+    "effect": "Strength II",
+    "duration": "1:30",
+    "modifier": "Enhanced"
+  },
+  {
+    "input": "Potion of Regeneration",
+    "ingredient": "Glowstone Dust",
+    "output": "Potion of Regeneration II",
+    "effect": "Regeneration II",
+    "duration": "0:22",
+    "modifier": "Enhanced"
+  },
+  {
+    "input": "Potion of Poison",
+    "ingredient": "Glowstone Dust",
+    "output": "Potion of Poison II",
+    "effect": "Poison II",
+    "duration": "0:21",
+    "modifier": "Enhanced"
+  },
+  {
+    "input": "Potion of Harming",
+    "ingredient": "Glowstone Dust",
+    "output": "Potion of Harming II",
+    "effect": "Instant Damage II",
+    "duration": "instant",
+    "modifier": "Enhanced"
+  },
+  {
+    "input": "Potion of the Turtle Master",
+    "ingredient": "Glowstone Dust",
+    "output": "Potion of the Turtle Master II",
+    "effect": "Slowness VI + Resistance IV",
+    "duration": "0:20",
+    "modifier": "Enhanced"
+  },
+  {
+    "input": "Potion of Swiftness",
+    "ingredient": "Fermented Spider Eye",
+    "output": "Potion of Slowness",
+    "effect": "Slowness",
+    "duration": "1:30"
+  },
+  {
+    "input": "Potion of Leaping",
+    "ingredient": "Fermented Spider Eye",
+    "output": "Potion of Slowness",
+    "effect": "Slowness",
+    "duration": "1:30"
+  },
+  {
+    "input": "Potion of Healing",
+    "ingredient": "Fermented Spider Eye",
+    "output": "Potion of Harming",
+    "effect": "Instant Damage",
+    "duration": "instant"
+  },
+  {
+    "input": "Potion of Poison",
+    "ingredient": "Fermented Spider Eye",
+    "output": "Potion of Harming",
+    "effect": "Instant Damage",
+    "duration": "instant"
+  },
+  {
+    "input": "Potion of Night Vision",
+    "ingredient": "Fermented Spider Eye",
+    "output": "Potion of Invisibility",
+    "effect": "Invisibility",
+    "duration": "3:00"
+  },
+  {
+    "input": "Potion of Fire Resistance",
+    "ingredient": "Fermented Spider Eye",
+    "output": "Potion of Slowness",
+    "effect": "Slowness",
+    "duration": "1:30"
+  },
+  {
+    "input": "Potion of Water Breathing",
+    "ingredient": "Fermented Spider Eye",
+    "output": "Potion of Harming",
+    "effect": "Instant Damage",
+    "duration": "instant"
+  },
+  {
+    "input": "Any Potion",
+    "ingredient": "Gunpowder",
+    "output": "Splash Potion",
+    "description": "Converts any drinkable potion to splash potion",
+    "modifier": "Splash"
+  },
+  {
+    "input": "Any Splash Potion",
+    "ingredient": "Dragon's Breath",
+    "output": "Lingering Potion",
+    "description": "Converts any splash potion to lingering potion",
+    "modifier": "Lingering"
+  }
+]

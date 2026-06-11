@@ -1,0 +1,392 @@
+[
+  {
+    "name": "badlands",
+    "displayName": "Badlands",
+    "category": "mesa",
+    "dimension": "overworld"
+  },
+  {
+    "name": "bamboo_jungle",
+    "displayName": "Bamboo Jungle",
+    "category": "jungle",
+    "dimension": "overworld"
+  },
+  {
+    "name": "basalt_deltas",
+    "displayName": "Basalt Deltas",
+    "category": "nether",
+    "dimension": "nether"
+  },
+  {
+    "name": "beach",
+    "displayName": "Beach",
+    "category": "beach",
+    "dimension": "overworld"
+  },
+  {
+    "name": "birch_forest",
+    "displayName": "Birch Forest",
+    "category": "forest",
+    "dimension": "overworld"
+  },
+  {
+    "name": "cherry_grove",
+    "displayName": "Cherry Grove",
+    "category": "forest",
+    "dimension": "overworld"
+  },
+  {
+    "name": "cold_ocean",
+    "displayName": "Cold Ocean",
+    "category": "ocean",
+    "dimension": "overworld"
+  },
+  {
+    "name": "crimson_forest",
+    "displayName": "Crimson Forest",
+    "category": "nether",
+    "dimension": "nether"
+  },
+  {
+    "name": "dark_forest",
+    "displayName": "Dark Forest",
+    "category": "forest",
+    "dimension": "overworld"
+  },
+  {
+    "name": "deep_cold_ocean",
+    "displayName": "Deep Cold Ocean",
+    "category": "ocean",
+    "dimension": "overworld"
+  },
+  {
+    "name": "deep_dark",
+    "displayName": "Deep Dark",
+    "category": "underground",
+    "dimension": "overworld"
+  },
+  {
+    "name": "deep_frozen_ocean",
+    "displayName": "Deep Frozen Ocean",
+    "category": "ocean",
+    "dimension": "overworld"
+  },
+  {
+    "name": "deep_lukewarm_ocean",
+    "displayName": "Deep Lukewarm Ocean",
+    "category": "ocean",
+    "dimension": "overworld"
+  },
+  {
+    "name": "deep_ocean",
+    "displayName": "Deep Ocean",
+    "category": "ocean",
+    "dimension": "overworld"
+  },
+  {
+    "name": "desert",
+    "displayName": "Desert",
+    "category": "desert",
+    "dimension": "overworld"
+  },
+  {
+    "name": "dripstone_caves",
+    "displayName": "Dripstone Caves",
+    "category": "underground",
+    "dimension": "overworld"
+  },
+  {
+    "name": "end_barrens",
+    "displayName": "End Barrens",
+    "category": "the_end",
+    "dimension": "end"
+  },
+  {
+    "name": "end_highlands",
+    "displayName": "End Highlands",
+    "category": "the_end",
+    "dimension": "end"
+  },
+  {
+    "name": "end_midlands",
+    "displayName": "End Midlands",
+    "category": "the_end",
+    "dimension": "end"
+  },
+  {
+    "name": "eroded_badlands",
+    "displayName": "Eroded Badlands",
+    "category": "mesa",
+    "dimension": "overworld"
+  },
+  {
+    "name": "flower_forest",
+    "displayName": "Flower Forest",
+    "category": "forest",
+    "dimension": "overworld"
+  },
+  {
+    "name": "forest",
+    "displayName": "Forest",
+    "category": "forest",
+    "dimension": "overworld"
+  },
+  {
+    "name": "frozen_ocean",
+    "displayName": "Frozen Ocean",
+    "category": "ocean",
+    "dimension": "overworld"
+  },
+  {
+    "name": "frozen_peaks",
+    "displayName": "Frozen Peaks",
+    "category": "ice",
+    "dimension": "overworld"
+  },
+  {
+    "name": "frozen_river",
+    "displayName": "Frozen River",
+    "category": "ice",
+    "dimension": "overworld"
+  },
+  {
+    "name": "grove",
+    "displayName": "Grove",
+    "category": "forest",
+    "dimension": "overworld"
+  },
+  {
+    "name": "ice_spikes",
+    "displayName": "Ice Spikes",
+    "category": "ice",
+    "dimension": "overworld"
+  },
+  {
+    "name": "jagged_peaks",
+    "displayName": "Jagged Peaks",
+    "category": "mountain",
+    "dimension": "overworld"
+  },
+  {
+    "name": "jungle",
+    "displayName": "Jungle",
+    "category": "jungle",
+    "dimension": "overworld"
+  },
+  {
+    "name": "lukewarm_ocean",
+    "displayName": "Lukewarm Ocean",
+    "category": "ocean",
+    "dimension": "overworld"
+  },
+  {
+    "name": "lush_caves",
+    "displayName": "Lush Caves",
+    "category": "underground",
+    "dimension": "overworld"
+  },
+  {
+    "name": "mangrove_swamp",
+    "displayName": "Mangrove Swamp",
+    "category": "forest",
+    "dimension": "overworld"
+  },
+  {
+    "name": "meadow",
+    "displayName": "Meadow",
+    "category": "mountain",
+    "dimension": "overworld"
+  },
+  {
+    "name": "mushroom_fields",
+    "displayName": "Mushroom Fields",
+    "category": "mushroom",
+    "dimension": "overworld"
+  },
+  {
+    "name": "nether_wastes",
+    "displayName": "Nether Wastes",
+    "category": "nether",
+    "dimension": "nether"
+  },
+  {
+    "name": "ocean",
+    "displayName": "Ocean",
+    "category": "ocean",
+    "dimension": "overworld"
+  },
+  {
+    "name": "old_growth_birch_forest",
+    "displayName": "Old Growth Birch Forest",
+    "category": "forest",
+    "dimension": "overworld"
+  },
+  {
+    "name": "old_growth_pine_taiga",
+    "displayName": "Old Growth Pine Taiga",
+    "category": "taiga",
+    "dimension": "overworld"
+  },
+  {
+    "name": "old_growth_spruce_taiga",
+    "displayName": "Old Growth Spruce Taiga",
+    "category": "taiga",
+    "dimension": "overworld"
+  },
+  {
+    "name": "pale_garden",
+    "displayName": "Pale Garden",
+    "category": "none",
+    "dimension": "overworld"
+  },
+  {
+    "name": "plains",
+    "displayName": "Plains",
+    "category": "plains",
+    "dimension": "overworld"
+  },
+  {
+    "name": "river",
+    "displayName": "River",
+    "category": "river",
+    "dimension": "overworld"
+  },
+  {
+    "name": "savanna",
+    "displayName": "Savanna",
+    "category": "savanna",
+    "dimension": "overworld"
+  },
+  {
+    "name": "savanna_plateau",
+    "displayName": "Savanna Plateau",
+    "category": "savanna",
+    "dimension": "overworld"
+  },
+  {
+    "name": "small_end_islands",
+    "displayName": "Small End Islands",
+    "category": "the_end",
+    "dimension": "end"
+  },
+  {
+    "name": "snowy_beach",
+    "displayName": "Snowy Beach",
+    "category": "beach",
+    "dimension": "overworld"
+  },
+  {
+    "name": "snowy_plains",
+    "displayName": "Snowy Plains",
+    "category": "plains",
+    "dimension": "overworld"
+  },
+  {
+    "name": "snowy_slopes",
+    "displayName": "Snowy Slopes",
+    "category": "mountain",
+    "dimension": "overworld"
+  },
+  {
+    "name": "snowy_taiga",
+    "displayName": "Snowy Taiga",
+    "category": "taiga",
+    "dimension": "overworld"
+  },
+  {
+    "name": "soul_sand_valley",
+    "displayName": "Soul Sand Valley",
+    "category": "nether",
+    "dimension": "nether"
+  },
+  {
+    "name": "sparse_jungle",
+    "displayName": "Sparse Jungle",
+    "category": "jungle",
+    "dimension": "overworld"
+  },
+  {
+    "name": "stony_peaks",
+    "displayName": "Stony Peaks",
+    "category": "mountain",
+    "dimension": "overworld"
+  },
+  {
+    "name": "stony_shore",
+    "displayName": "Stony Shore",
+    "category": "beach",
+    "dimension": "overworld"
+  },
+  {
+    "name": "sunflower_plains",
+    "displayName": "Sunflower Plains",
+    "category": "plains",
+    "dimension": "overworld"
+  },
+  {
+    "name": "swamp",
+    "displayName": "Swamp",
+    "category": "swamp",
+    "dimension": "overworld"
+  },
+  {
+    "name": "taiga",
+    "displayName": "Taiga",
+    "category": "taiga",
+    "dimension": "overworld"
+  },
+  {
+    "name": "the_end",
+    "displayName": "The End",
+    "category": "the_end",
+    "dimension": "end"
+  },
+  {
+    "name": "the_void",
+    "displayName": "The Void",
+    "category": "none",
+    "dimension": "overworld"
+  },
+  {
+    "name": "warm_ocean",
+    "displayName": "Warm Ocean",
+    "category": "ocean",
+    "dimension": "overworld"
+  },
+  {
+    "name": "warped_forest",
+    "displayName": "Warped Forest",
+    "category": "nether",
+    "dimension": "nether"
+  },
+  {
+    "name": "windswept_forest",
+    "displayName": "Windswept Forest",
+    "category": "forest",
+    "dimension": "overworld"
+  },
+  {
+    "name": "windswept_gravelly_hills",
+    "displayName": "Windswept Gravelly Hills",
+    "category": "extreme_hills",
+    "dimension": "overworld"
+  },
+  {
+    "name": "windswept_hills",
+    "displayName": "Windswept Hills",
+    "category": "extreme_hills",
+    "dimension": "overworld"
+  },
+  {
+    "name": "windswept_savanna",
+    "displayName": "Windswept Savanna",
+    "category": "savanna",
+    "dimension": "overworld"
+  },
+  {
+    "name": "wooded_badlands",
+    "displayName": "Wooded Badlands",
+    "category": "mesa",
+    "dimension": "overworld"
+  }
+]

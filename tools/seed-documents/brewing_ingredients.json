@@ -1,0 +1,82 @@
+[
+  {
+    "name": "redstone_ore",
+    "displayName": "Redstone Ore"
+  },
+  {
+    "name": "deepslate_redstone_ore",
+    "displayName": "Deepslate Redstone Ore"
+  },
+  {
+    "name": "sugar_cane",
+    "displayName": "Sugar Cane"
+  },
+  {
+    "name": "glowstone",
+    "displayName": "Glowstone"
+  },
+  {
+    "name": "nether_wart_block",
+    "displayName": "Nether Wart Block"
+  },
+  {
+    "name": "redstone",
+    "displayName": "Redstone Dust"
+  },
+  {
+    "name": "redstone_torch",
+    "displayName": "Redstone Torch"
+  },
+  {
+    "name": "redstone_block",
+    "displayName": "Block of Redstone"
+  },
+  {
+    "name": "redstone_lamp",
+    "displayName": "Redstone Lamp"
+  },
+  {
+    "name": "phantom_membrane",
+    "displayName": "Phantom Membrane"
+  },
+  {
+    "name": "gunpowder",
+    "displayName": "Gunpowder"
+  },
+  {
+    "name": "glowstone_dust",
+    "displayName": "Glowstone Dust"
+  },
+  {
+    "name": "sugar",
+    "displayName": "Sugar"
+  },
+  {
+    "name": "ghast_tear",
+    "displayName": "Ghast Tear"
+  },
+  {
+    "name": "nether_wart",
+    "displayName": "Nether Wart"
+  },
+  {
+    "name": "fermented_spider_eye",
+    "displayName": "Fermented Spider Eye"
+  },
+  {
+    "name": "blaze_powder",
+    "displayName": "Blaze Powder"
+  },
+  {
+    "name": "magma_cream",
+    "displayName": "Magma Cream"
+  },
+  {
+    "name": "glistering_melon_slice",
+    "displayName": "Glistering Melon Slice"
+  },
+  {
+    "name": "dragon_breath",
+    "displayName": "Dragon's Breath"
+  }
+]

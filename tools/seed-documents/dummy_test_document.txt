@@ -1,0 +1,6 @@
+Game Mechanics Notes
+
+1. Water flows up to 7 blocks from a source block.
+2. Crops grow faster when planted on hydrated farmland.
+3. Villagers can pick up items and share food with other villagers.
+4. Beds define village centers and villager breeding spots.

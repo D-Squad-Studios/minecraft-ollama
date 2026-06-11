@@ -23,3 +23,22 @@ run
 
 # Files from Forge MDK
 forge*changelog.txt
+
+# vscode
+.vscode/
+.DS_Store
+.deploy/*.env
+move_build.sh
+
+# jar Signing secrets
+modsigning.jks
+keystore.properties
+AGENTS.md
+CLAUDE.md
+tools/minecraft_data_output/
+node_modules/
+package-lock.json
+package.json
+
+# vector store seed data
+src/main/resources/ollamamod/seed/documents.store

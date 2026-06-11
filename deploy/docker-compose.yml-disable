@@ -1,0 +1,45 @@
+version: "3.9"
+services:
+  forge:
+    image: itzg/minecraft-server:java17
+    container_name: forge
+    environment:
+      EULA: "TRUE"
+      TYPE: "FORGE"
+      VERSION: "${MC_VERSION:-1.20.1}"
+      FORGE_VERSION: "${FORGE_VERSION:-47.2.0}"
+      MEMORY: "${FORGE_MEMORY:-8G}"
+      USE_AIKAR_FLAGS: "true"
+    ports:
+      - "25565:25565"
+    volumes:
+      - /srv/minecraft/server:/data
+      - /srv/minecraft/mods:/mods-extra:ro
+      - /srv/minecraft/config:/config-extra:ro
+    restart: unless-stopped
+    command: >
+      bash -lc 'mkdir -p /data/mods /data/config &&
+                cp -r /mods-extra/* /data/mods/ 2>/dev/null || true &&
+                cp -r /config-extra/* /data/config/ 2>/dev/null || true &&
+                /start'
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    volumes:
+      - /srv/ollama:/root/.ollama
+    ports:
+      - "127.0.0.1:11434:11434"
+    restart: unless-stopped
+
+  bridge:
+    image: eclipse-temurin:17-jre
+    container_name: llm-bridge
+    volumes:
+      - /srv/bridge:/app
+    working_dir: /app
+    command: ["java","-Xmx512m","-jar","llm-bridge.jar","--port=8080","--ollama=http://ollama:11434"]
+    ports:
+      - "127.0.0.1:8080:8080"
+    depends_on: [ollama]
+    restart: unless-stopped
